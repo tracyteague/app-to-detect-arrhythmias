@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>ECG File Upload Instructions</h1>
+
+<p class="instructions">Upload ECG recording as '.csv' file in the following format:
+
+	<img id='ex_csv' src='/static/images/example_upload_csv.png' alt="ex_csv">
+
+	<ul>
+		<li><span class='bold'>sample #:</span> sample # of reading instance</li>
+		<li><span class='bold'>MLII:</span> value of reading from 'MLII' lead placement</li>
+		<li><span class='bold'>beat:</span> boolean value (T/F) representing whether or not instance is a heart beat</li>
+	</ul>
+</p>
+
+<form class="form-inline" method="post" enctype="multipart/form-data" action="{{ url_for('result') }}">
+	<input type="file" name="file" id="csvUpload" accept='.csv'>
+	<br>
+	<button id='submit' type="submit"s>See Results</button>
+</form>
+
+{% endblock %}

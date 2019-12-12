@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Result:
+	{% if is_normal == 0 %}
+		<strong><font color='green'>Normal</font></strong>
+	{% else %}
+		<strong><font color='red'>Abnormal heart beat(s) detected</font></strong>
+	{% endif %}
+</h1>
+
+<h2>ECG Signal Recording</h1>
+	<img id='plot' src={{fig_route}} alt="plot">
+
+	<p id='recommendation'>
+		<span class='bold'>Recommendation:</span>
+		{% if is_normal == 0 %}
+			Do not refer to specialist
+		{% else %}
+			Refer to specialist
+		{% endif %}
+	</p>
+
+<h1 id='class-details'>Full Report</h1>
+
+<h2>Probability of Type per Beat</h2>
+
+<table class='dataframe'>
+	{{ table|safe }}
+</table>
+
+{% endblock %}

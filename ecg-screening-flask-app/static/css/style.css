@@ -1,0 +1,59 @@
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans)
+*/
+img {
+	width:90%;
+}
+
+h1#class-details {
+	padding-top: 1em;
+}
+
+span.bold {
+	font-weight: bold;
+}
+
+p#contact-info {
+	color: #222222;
+	font-size: 1.5em;
+	margin-left: 5%;
+
+}
+p#contact-info a {
+	color: #2274A5;
+}
+
+span#contact-info {
+	padding: 2em;
+}
+
+table.dataframe {
+    width:80%; 
+    margin-left:5%;
+    margin-right:5%; 
+	margin-top: .5%;
+	align-self: center;
+	text-align: center;
+}
+
+table.dataframe, .dataframe td {
+  border: .5px;
+  border-bottom: 1px solid #FDFDFF;
+  border-collapse: collapse;
+  text-align:center;
+  padding: 1em;
+  margin-bottom: .5em;
+  font-size: 1em;
+  background: #edeef0;
+}
+
+table.dataframe thead th {
+  border: 0px;
+  border-bottom: 1px solid #FDFDFF;
+  border-collapse: collapse;
+  text-align:center;
+  padding: 10px;
+  margin-bottom: 1em;
+  font-size: 1em;	
+  background: #222222;
+  color: #FDFDFF;
+}

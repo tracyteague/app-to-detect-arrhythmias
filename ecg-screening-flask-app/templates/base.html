@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css" />
+    <title>ECG Screening App</title>
+</head>
+
+    <!-- Top navigation -->
+<div class="topnav">
+  <a id='title' href="/">ECG Screening App</a>
+  <a href="/contact">Contact</a>
+</div>
+
+<div id="main-page">
+
+  <!-- Error handling -->
+  {% if error %}
+    <p id='error'>{{ error }}</p>
+  {% endif %}
+
+    <!-- Inner content of each page -->
+    <div class='container'>
+        <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
+        </div>
+    </div>
+
+</div>
+</html>
